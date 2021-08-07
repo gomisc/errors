@@ -33,3 +33,59 @@ func Is(err, target error) bool {
 func As(err error, target interface{}) bool {
 	return errors.As(err, target)
 }
+
+// And собирает ошибки в цепочку
+func And(err1, err2 error) error {
+	if err2 == nil {
+		return err1
+	}
+
+	if err1 == nil {
+		return err2
+	}
+
+	var (
+		ch1, ch2 Chain
+	)
+
+	if !As(err1, &ch1) {
+		ch1 = make(Chain, 0, 4)
+		ch1 = append(ch1, err1)
+	}
+
+	if As(err2, &ch2) {
+		ch1 = append(ch1, ch2...)
+	} else {
+		ch1 = append(ch1, err2)
+	}
+
+	return ch1
+}
+
+// AsChain ищет тип `errors.Chain` во вложенных ошибках и возвращает его.
+// Если цепочки не найдено, то создаётся новая, состоящая из текущей ошибки.
+func AsChain(err error) Chain {
+	var (
+		w     *wrappedError
+		chain Chain
+	)
+
+	if As(err, &w) && As(w, &chain) {
+		newChain := make(Chain, len(chain))
+		for i, e := range chain {
+			newChain[i] = &wrappedError{
+				reasons: w.reasons,
+				err:  e,
+				fields: w.fields,
+			}
+		}
+
+		return newChain
+	}
+
+	if !As(err, &chain) {
+		return Chain{err}
+	}
+
+	return chain
+}
