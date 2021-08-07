@@ -1,5 +1,9 @@
 package errors
 
+import (
+	"bytes"
+)
+
 var _ error = Chain{}
 
 // Chain - цепочка ошибок
@@ -16,5 +20,35 @@ func (ch Chain) Error() string {
 		return ch[0].Error()
 	}
 
-	return ch.Error()
+	var buf bytes.Buffer
+
+	for i := range ch {
+		if i > 0 {
+			buf.WriteString(";")
+		}
+
+		buf.WriteString(ch[i].Error())
+	}
+
+	return buf.String()
+}
+
+func (ch Chain) As(target interface{}) bool {
+	for i := range ch{
+		if As(ch[i], target) {
+			return true
+		}
+	}
+
+	return false
+}
+
+func (ch Chain) Is(err error) bool {
+	for i := range ch{
+		if Is(ch[i], err) {
+			return true
+		}
+	}
+
+	return false
 }
