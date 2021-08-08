@@ -2,10 +2,14 @@ package errors
 
 import (
 	"errors"
+
+	"git.corout.in/golibs/fields"
 )
 
-func Builder() CustomError {
-	return &wrappedError{}
+func Builder(fields ...fields.Field) CustomError {
+	return &wrappedError{
+		fields: fields,
+	}
 }
 
 func New(reason string) error {

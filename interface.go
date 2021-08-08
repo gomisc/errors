@@ -10,5 +10,6 @@ type CustomError interface {
 	Newf(format string, args ...interface{}) error
 	Wrap(err error, reason string) error
 	Wrapf(err error, format string, args ...interface{}) error
+	With(fields ...fields.Field) CustomError
 	fields.FieldContainer
 }

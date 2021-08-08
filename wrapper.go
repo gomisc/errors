@@ -133,6 +133,12 @@ func (we *wrappedError) As(target interface{}) bool {
 	}
 }
 
+func (we *wrappedError) With(fields ...fields.Field) CustomError {
+	we.fields = append(we.fields, fields...)
+
+	return we
+}
+
 func (we *wrappedError) position(depth int) CustomError {
 	pc, file, line, _ := runtime.Caller(depth + 1) // nolint: gomnd, dogsled
 
