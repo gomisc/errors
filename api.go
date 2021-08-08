@@ -93,3 +93,13 @@ func AsChain(err error) Chain {
 
 	return chain
 }
+
+func Extract(err error) []fields.Field {
+	var we *wrappedError
+
+	if As(err, &we) {
+		return we.fields
+	}
+
+	return []fields.Field{fields.Error(err)}
+}
