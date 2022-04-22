@@ -3,13 +3,14 @@ package errors
 import (
 	"testing"
 
-	"git.dev.cloud.mts.ru/billing/common/pkg/infra/logger/zap"
+	"git.corout.in/golibs/slog"
+	"git.corout.in/golibs/slog/zaplogger"
 )
 
 func TestRecoverError(t *testing.T) {
 	const testPanic = Const("test panic")
 
-	log := zap.NewTesting(t)
+	log := zaplogger.NewTesting(t, slog.DebugLevel)
 
 	tests := []struct {
 		name      string

@@ -3,9 +3,11 @@ package errors_test
 import (
 	"fmt"
 
-	"git.dev.cloud.mts.ru/billing/common/pkg/infra/errors"
-	"git.dev.cloud.mts.ru/billing/common/pkg/infra/fields"
-	"git.dev.cloud.mts.ru/billing/common/pkg/infra/logger/zap"
+	"git.corout.in/golibs/fields"
+	"git.corout.in/golibs/slog"
+	"git.corout.in/golibs/slog/zaplogger"
+
+	"git.corout.in/golibs/errors"
 )
 
 func Example_errorsUsage() {
@@ -16,7 +18,7 @@ func Example_errorsUsage() {
 		Str("test-str-key", "blah-blah").
 		Just(err)
 
-	log := zap.NewColored(5)
+	log := zaplogger.New(slog.DebugLevel, true)
 
 	log.Error("Test error", err)
 	log.Errorf("Test error with arg: %s", "test arg", err)
