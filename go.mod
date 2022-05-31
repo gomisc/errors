@@ -1,6 +1,6 @@
 module git.corout.in/golibs/errors
 
-go 1.18
+go 1.17
 
 require (
 	git.corout.in/golibs/fields v1.0.2
