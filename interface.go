@@ -37,14 +37,14 @@ type ContextError interface {
 	Extract(out fields.FieldExtractor)
 }
 
-func New() {
-
-}
-
 // Ctx - конструтор контекстной ошибки для определния полей
 // в блоках условий для последующей обертки или формирования как есть
 func Ctx() ContextError {
 	return &wrappedError{}
+}
+
+func New(reason string) error {
+	return newerr().New(reason)
 }
 
 func Wrap(err error, message string) error {
