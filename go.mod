@@ -3,7 +3,7 @@ module git.corout.in/golibs/errors
 go 1.18
 
 require (
-	git.corout.in/golibs/fields v1.0.5
+	git.corout.in/golibs/fields v1.0.6
 	git.corout.in/golibs/slog v1.0.6
 )
 
