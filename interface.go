@@ -34,6 +34,7 @@ type ContextError interface {
 	Strings(key string, values []string) ContextError
 	Stringer(key string, value fmt.Stringer) ContextError
 	Any(key string, value interface{}) ContextError
+	WithStack() ContextError
 	Extract(out fields.FieldExtractor)
 }
 

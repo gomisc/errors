@@ -130,6 +130,17 @@ func (we *wrappedError) Any(key string, value interface{}) ContextError {
 	return we
 }
 
+func (we *wrappedError) WithStack() ContextError {
+	if we.pos != nil {
+		we.fields = append(
+			we.fields,
+			fields.Str(stackKey, we.pos.stack),
+		)
+	}
+
+	return we
+}
+
 // Extract имплементация fields.FieldExtractor
 func (we *wrappedError) Extract(out fields.FieldExtractor) {
 	for i := 0; i < len(we.fields); i++ {
@@ -139,6 +150,5 @@ func (we *wrappedError) Extract(out fields.FieldExtractor) {
 
 	if we.pos != nil {
 		out.Str(positionKey, fmt.Sprintf("%s:%d", we.pos.file, we.pos.line))
-		out.Str(stackKey, we.pos.stack)
 	}
 }
