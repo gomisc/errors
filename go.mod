@@ -3,8 +3,8 @@ module git.eth4.dev/golibs/errors
 go 1.18
 
 require (
-	git.eth4.dev/golibs/fields v1.0.6
-	git.eth4.dev/golibs/slog v1.0.9
+	git.eth4.dev/golibs/fields v1.1.0
+	git.eth4.dev/golibs/slog v1.1.0
 )
 
 require (
