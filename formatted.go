@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"git.corout.in/golibs/fields"
+	"git.eth4.dev/golibs/fields"
 )
 
 // FormattedError форматированная ошибка для вывода в результатах тестов
@@ -14,7 +14,7 @@ type FormattedError struct {
 }
 
 // Formatted конструктор форматированной аннотированной полями ошибки
-func Formatted(err error, args ...interface{}) error {
+func Formatted(err error, args ...any) error {
 	if err == nil {
 		return nil
 	}

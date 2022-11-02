@@ -3,8 +3,8 @@ package errors
 import (
 	"testing"
 
-	"git.corout.in/golibs/slog"
-	"git.corout.in/golibs/slog/zaplogger"
+	"git.eth4.dev/golibs/slog"
+	"git.eth4.dev/golibs/slog/zaplogger"
 )
 
 func TestRecoverError(t *testing.T) {

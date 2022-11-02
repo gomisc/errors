@@ -4,16 +4,16 @@ import (
 	goErrors "errors"
 	"fmt"
 
-	"git.corout.in/golibs/fields"
+	"git.eth4.dev/golibs/fields"
 )
 
 // ContextError - интерфейс контекстной (анотированной полями) ошибки
 type ContextError interface {
 	Just(err error) error
 	New(reason string) error
-	Newf(format string, args ...interface{}) error
+	Newf(format string, args ...any) error
 	Wrap(err error, reason string) error
-	Wrapf(err error, format string, args ...interface{}) error
+	Wrapf(err error, format string, args ...any) error
 	With(flds ...fields.Field) ContextError
 	Pos(depth int) ContextError
 
@@ -52,7 +52,7 @@ func Wrap(err error, message string) error {
 	return newerr().position(1).Wrap(err, message)
 }
 
-func Wrapf(err error, format string, args ...interface{}) error {
+func Wrapf(err error, format string, args ...any) error {
 	return newerr().position(1).Wrapf(err, format, args...)
 }
 

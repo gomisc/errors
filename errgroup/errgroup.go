@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"git.corout.in/golibs/errors"
+	"git.eth4.dev/golibs/errors"
 )
 
 // Group - набор горутин для запуска подзадач некоторой большой задачи

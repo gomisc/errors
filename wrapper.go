@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"strings"
 
-	"git.corout.in/golibs/fields"
+	"git.eth4.dev/golibs/fields"
 )
 
 var (
@@ -67,7 +67,7 @@ func (we *wrappedError) New(reason string) error {
 }
 
 // Newf - конструктор новой контекстной ошибки с форматируемым мессаджем
-func (we *wrappedError) Newf(format string, args ...interface{}) error {
+func (we *wrappedError) Newf(format string, args ...any) error {
 	if we.pos == nil {
 		we.position(1)
 	}
@@ -103,7 +103,7 @@ func (we *wrappedError) Wrap(err error, reason string) error {
 }
 
 // Wrapf - оборачивает ошибку предыдущего уровня с форматированным мессаджем
-func (we *wrappedError) Wrapf(err error, format string, args ...interface{}) error {
+func (we *wrappedError) Wrapf(err error, format string, args ...any) error {
 	if we.pos == nil {
 		we.position(1)
 	}

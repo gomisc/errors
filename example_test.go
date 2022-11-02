@@ -3,11 +3,11 @@ package errors_test
 import (
 	"fmt"
 
-	"git.corout.in/golibs/fields"
-	"git.corout.in/golibs/slog"
-	"git.corout.in/golibs/slog/zaplogger"
+	"git.eth4.dev/golibs/fields"
+	"git.eth4.dev/golibs/slog"
+	"git.eth4.dev/golibs/slog/zaplogger"
 
-	"git.corout.in/golibs/errors"
+	"git.eth4.dev/golibs/errors"
 )
 
 func Example_errorsUsage() {

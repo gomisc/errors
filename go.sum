@@ -1,7 +1,7 @@
-git.corout.in/golibs/fields v1.0.6 h1:qobLeHsVzxhsUH+cBc8JEtz/B9M691HSLy0J9pUJXHA=
-git.corout.in/golibs/fields v1.0.6/go.mod h1:SfKMdRc3L2vprkZQ7/eTK5tuKrQ+w7O2Fh6r3ZQjmP8=
-git.corout.in/golibs/slog v1.0.9 h1:tol+rBAMb0d4hbjuroRb99qJE4Nr44RiTBjJKsWnwuo=
-git.corout.in/golibs/slog v1.0.9/go.mod h1:4CmPpKowM9tXa3kT32t7k7WYyLGp8iQnk0EvhePi/0s=
+git.eth4.dev/golibs/fields v1.0.6 h1:qobLeHsVzxhsUH+cBc8JEtz/B9M691HSLy0J9pUJXHA=
+git.eth4.dev/golibs/fields v1.0.6/go.mod h1:SfKMdRc3L2vprkZQ7/eTK5tuKrQ+w7O2Fh6r3ZQjmP8=
+git.eth4.dev/golibs/slog v1.0.9 h1:tol+rBAMb0d4hbjuroRb99qJE4Nr44RiTBjJKsWnwuo=
+git.eth4.dev/golibs/slog v1.0.9/go.mod h1:4CmPpKowM9tXa3kT32t7k7WYyLGp8iQnk0EvhePi/0s=
 github.com/benbjohnson/clock v1.1.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
 github.com/benbjohnson/clock v1.3.0 h1:ip6w0uFQkncKQ979AypyG0ER7mqUSBdKLOgAle/AT8A=
 github.com/benbjohnson/clock v1.3.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=

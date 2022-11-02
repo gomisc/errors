@@ -1,10 +1,10 @@
-module git.corout.in/golibs/errors
+module git.eth4.dev/golibs/errors
 
 go 1.18
 
 require (
-	git.corout.in/golibs/fields v1.0.6
-	git.corout.in/golibs/slog v1.0.9
+	git.eth4.dev/golibs/fields v1.0.6
+	git.eth4.dev/golibs/slog v1.0.9
 )
 
 require (

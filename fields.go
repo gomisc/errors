@@ -3,7 +3,7 @@ package errors
 import (
 	"fmt"
 
-	"git.corout.in/golibs/fields"
+	"git.eth4.dev/golibs/fields"
 )
 
 const (
