@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	git.eth4.dev/golibs/fields v1.1.0
-	git.eth4.dev/golibs/slog v1.1.0
+	git.eth4.dev/golibs/slog v1.1.1
 )
 
 require (

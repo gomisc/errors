@@ -1,7 +1,7 @@
 git.eth4.dev/golibs/fields v1.1.0 h1:huVhoa9Yc3n5FFAgtKjN8mdghbFbG8iJqW8n57tjHjg=
 git.eth4.dev/golibs/fields v1.1.0/go.mod h1:YzNxsU2nRSAntwL9d43c3n8XTPln4kpdiSzKqLW9GLQ=
-git.eth4.dev/golibs/slog v1.1.0 h1:22gxGibtT6do3j+gP63dtL57YCMt8O6wQOrKpeGP1ow=
-git.eth4.dev/golibs/slog v1.1.0/go.mod h1:BjPzF+nRJbxlfAL946EymYnJN0u+HRYnINUTOgI+gLI=
+git.eth4.dev/golibs/slog v1.1.1 h1:Ke4L4kKXcFIeT1nwVU9Ij4FGDrkBPbtgIrm7mnh1QhI=
+git.eth4.dev/golibs/slog v1.1.1/go.mod h1:fHN91vDrwUgKaTfXkuRb9XMYjHhiAQIiuxRgNjqwLkM=
 github.com/benbjohnson/clock v1.1.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
 github.com/benbjohnson/clock v1.3.0 h1:ip6w0uFQkncKQ979AypyG0ER7mqUSBdKLOgAle/AT8A=
 github.com/benbjohnson/clock v1.3.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
