@@ -2,15 +2,10 @@ package errors
 
 import (
 	"testing"
-
-	"git.eth4.dev/golibs/slog"
-	"git.eth4.dev/golibs/slog/zaplogger"
 )
 
 func TestRecoverError(t *testing.T) {
 	const testPanic = Const("test panic")
-
-	log := zaplogger.NewTesting(t, slog.DebugLevel)
 
 	tests := []struct {
 		name      string
@@ -40,9 +35,9 @@ func TestRecoverError(t *testing.T) {
 			tt.panicFunc(ch)
 
 			if err := <-ch; err != nil {
-				log.Info(err)
+				t.Error(err)
 			} else {
-				log.Error("expect panic error")
+				t.Error("expect panic error")
 			}
 		})
 	}
