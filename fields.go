@@ -3,7 +3,7 @@ package errors
 import (
 	"fmt"
 
-	"git.eth4.dev/golibs/fields"
+	"gopkg.in/gomisc/fields.v1"
 )
 
 const (

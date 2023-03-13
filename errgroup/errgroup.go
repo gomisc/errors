@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"git.eth4.dev/golibs/errors"
+	"gopkg.in/gomisc/errors.v1"
 )
 
 // Group - набор горутин для запуска подзадач некоторой большой задачи

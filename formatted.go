@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"git.eth4.dev/golibs/fields"
+	"gopkg.in/gomisc/fields.v1"
 )
 
 // FormattedError форматированная ошибка для вывода в результатах тестов

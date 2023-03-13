@@ -1,5 +1,5 @@
-module git.eth4.dev/golibs/errors
+module gopkg.in/gomisc/errors.v1
 
 go 1.18
 
-require git.eth4.dev/golibs/fields v1.1.0
+require gopkg.in/gomisc/fields.v1 latest
