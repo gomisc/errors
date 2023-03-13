@@ -1,2 +1,2 @@
-git.eth4.dev/golibs/fields v1.1.0 h1:huVhoa9Yc3n5FFAgtKjN8mdghbFbG8iJqW8n57tjHjg=
-git.eth4.dev/golibs/fields v1.1.0/go.mod h1:YzNxsU2nRSAntwL9d43c3n8XTPln4kpdiSzKqLW9GLQ=
+gopkg.in/gomisc/fields.v1 v1.1.2 h1:D82kQXcDnlhn4Dd1fjVlKdw4S/LCfISg9FhO6smQRcs=
+gopkg.in/gomisc/fields.v1 v1.1.2/go.mod h1:Q0YwEe/Bqu/ETnjP4mMfqirs9tsbWr1/LeYHiH+VUw0=
